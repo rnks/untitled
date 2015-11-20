@@ -48,8 +48,17 @@ def not_bad(s):
 #  a-front + b-front + a-back + b-back
 def front_back(a, b):
   # +++your code here+++
+  #detectiong odd strings
+  dev_a_b = len(a)/2
+  dev_b_b = len(b)/2
+  dev_a_f = len(a)/2
+  dev_b_f = len(b)/2
+  if len(a)%2 == 1: dev_a_f = len(a)/2 + 1
+  if len(b)%2 == 1: dev_b_f = len(b)/2 + 1
 
-  return
+  c = a[:dev_a_f] + b[:dev_b_f] + a[-dev_a_b:] + b[-dev_b_b:]
+
+  return c
 
 
 # Simple provided test() function used in main() to print
